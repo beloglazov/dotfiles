@@ -9,6 +9,7 @@ rm -rf ~/.fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes n | ~/.fzf/install
 
+rm -rf ~/.oh-my-fish
 git clone https://github.com/bpinto/oh-my-fish.git ~/.oh-my-fish
 
 fish_path=`which fish`
