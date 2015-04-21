@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-# rm -rf ~/.vim/plugged
-
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -13,3 +11,6 @@ git submodule update --init --recursive
 
 cd ~/.vim/plugged/vimproc.vim
 make
+
+mkdir -p ~/.sshrc.d
+ln -sfbv ~/.vimrc ~/.sshrc.d/
