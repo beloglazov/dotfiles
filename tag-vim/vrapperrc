@@ -1,0 +1,103 @@
+" Escape
+inoremap jk <Esc>`^
+inoremap <C-q> <Esc>`^
+noremap <C-q> <Esc>
+vnoremap <C-q> <Esc>
+cnoremap <C-q> <C-c>
+
+" Enter the command-line mode
+noremap <CR> :
+
+" Next / previous match
+noremap j ;
+noremap k ,
+
+" Home row beginning / end of line
+noremap h ^
+noremap l $
+
+" Insert mode movement
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
+" Insert mode beginning / end of line
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+
+" Scroll screen with the cursor
+noremap <C-j> gj<C-e>j
+noremap <C-k> gk<C-y>k
+noremap <C-h> h
+noremap <C-l> l
+
+" Easy redo
+nnoremap U <C-r>
+
+" Movement: operator-pending mode
+xnoremap ( i(
+xnoremap { i{
+xnoremap [ i[
+xnoremap < i<
+xnoremap ` i"
+xnoremap ' i'
+xnoremap " i"
+onoremap ( i(
+onoremap { i{
+onoremap [ i[
+onoremap < i<
+onoremap ` i"
+onoremap ' i'
+onoremap " i"
+
+" Duplicate a line and comment the first copy
+nnoremap gcd yyPgccj_
+
+" Duplicate a region and comment the first copy
+vnoremap gcc gc<Esc>
+
+" Duplicate a region and comment the first copy
+vnoremap gcd ygv<Esc>pgvgc<Esc>
+
+" Format code
+noremap <space>i :format<cr>
+
+" Change current word - kill
+noremap K ciw
+
+" Change in double quotes
+noremap J ci"
+
+" Join lines
+nnoremap <space>J J
+
+" Insert a space
+nnoremap <space><space> i<space><Esc>
+
+" Buffers
+nnoremap <space>d :q<cr>
+nnoremap <M-k> :bnext<cr>
+nnoremap <M-j> :bprevious<cr>
+nnoremap <space>l :ls<cr>
+nnoremap <space>m :maximize<cr>
+
+" Splits
+nnoremap <space>w <C-w>w
+
+" Eclipse actions
+eclipseaction recenter org.eclipse.ui.edit.text.recenter
+nnoremap zz :recenter<cr>
+eclipseaction editorlist org.eclipse.ui.window.nextEditor
+nnoremap <space>j :editorlist<cr>
+
+
+set autoindent
+set ignorecase
+set smartcase
+set incsearch
+set scrolloff=3
+set clipboard=unnamed
+
+set saney
+set contentassistmode
