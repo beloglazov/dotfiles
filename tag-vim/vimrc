@@ -522,8 +522,10 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Line length and wrapping
 set textwidth=80
-set colorcolumn=81
-highlight ColorColumn ctermbg=233
+if exists("&colorcolumn")
+    set colorcolumn=81
+    highlight ColorColumn ctermbg=233
+endif
 
 " Spell checking
 autocmd BufRead *.tex,*.md setlocal spell spelllang=en_au
