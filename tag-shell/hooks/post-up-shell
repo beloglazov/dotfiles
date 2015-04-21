@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+mkdir -p ~/bin
+rm -f ~/bin/fasd
+wget https://raw.githubusercontent.com/clvv/fasd/master/fasd -O ~/bin/fasd
+chmod +x ~/bin/fasd
+
+git clone https://github.com/bpinto/oh-my-fish.git ~/.oh-my-fish
+
+fish_path=`which fish`
+chsh -s $fish_path
+sudo chsh -s $fish_path
