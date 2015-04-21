@@ -1,6 +1,10 @@
 #!/usr/bin/env sh
 
-for i in `find ~/.hooks/post-up-*`; do
-    echo Running $(basename $i)
-    $i
-done
+if [ -d ~/.hooks ]; then
+    for i in `find ~/.hooks/post-up-*`; do
+        echo Running $(basename $i)
+        $i
+    done
+fi
+
+rm -rf ~/.hooks .README.md
