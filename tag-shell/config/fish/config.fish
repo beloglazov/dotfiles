@@ -7,6 +7,9 @@ set fish_theme beloglazov
 # Plugins
 set fish_plugins vi-mode pbcopy
 
+# Correct default editor
+set --export EDITOR vim
+
 # Vi-mode key bindings
 function vi_mode_user -a mode
 
