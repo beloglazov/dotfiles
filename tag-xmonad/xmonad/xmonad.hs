@@ -63,7 +63,7 @@ main = do
                  , ((myModMask .|. shiftMask, xK_h),  	 sendMessage (IncMasterN (-1)))
                  , ((myModMask .|. shiftMask, xK_l),     sendMessage (IncMasterN 1))
                  , ((myModMask .|. shiftMask, xK_F9), 	 spawn "suspend-to-mem")
-                 , ((myModMask, xK_F10), 	             spawn "slock")
+                 , ((myModMask, xK_F8), 	             spawn "slock")
                  , ((myModMask .|. shiftMask, xK_F11), 	 spawn "reboot")
                  , ((myModMask .|. shiftMask, xK_F12), 	 spawn "shutdown")
                  , ((myModMask, xK_a), screenWorkspace 2 >>= flip whenJust (windows . W.view))
