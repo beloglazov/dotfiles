@@ -1,78 +1,76 @@
 ! Font settings
-xft.autohint:  0
-xft.lcdfilter: lcddefault
-xft.hintstyle: hintfull
-xft.hinting:   1
-xft.antialias: 1
-xft.dpi:       96
-xft.rgba:      rgb
+Xft.autohint:  0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting:   1
+Xft.antialias: 1
+Xft.dpi:       96
+Xft.rgba:      rgb
 
 ! Cursor style
-xcursor.theme: Vanilla-DMZ-AA
-xcursor.size:  22
+Xcursor.theme: Vanilla-DMZ-AA
+Xcursor.size:  22
 
 ! Emacs colors
-emacs*Background:	#0c0d0e
-emacs*Foreground:	#7f8f9f
+Emacs*Background: #0c0d0e
+Emacs*Foreground: #7f8f9f
 
 ! Disable ctrl-shift keycap picture insert mode
-urxvt.iso14755: false
-urxvt.iso14755_52: false
+URxvt.iso14755:    false
+URxvt.iso14755_52: false
 
-! scrollback buffer lines - 65535 is max on most machines (64 is default)
-urxvt*saveLines: 65535
+! Scrollback buffer lines - 65535 is max on most machines (64 is default)
+URxvt*saveLines: 65535
 
-urxvt.perl-ext-common:  default,keyboard-select,url-select,clipboard
-urxvt.urlLauncher:      /usr/bin/chromium
-urxvt.underlineURLs:    true
+! URxvt extensions
+URxvt.perl-ext-common:  default,clipboard-osc,matcher
+URxvt.url-launcher:     chromium-browser
+URxvt.keysym.C-Delete:  perl:matcher:last
+URxvt.keysym.M-Delete:  perl:matcher:list
+URxvt.matcher.button:   2
 
-urxvt.keysym.M-Escape:  perl:keyboard-select:activate
-urxvt.keysym.M-u:       perl:url-select:select_next
-urxvt.keysym.M-c:       perl:clipboard:copy
-urxvt.keysym.M-v:       perl:clipboard:paste
-urxvt.keysym.M-C-v:     perl:clipboard:paste_escaped
+! URxvt style settings
+URxvt*font:	-*-terminus-medium-*-*-*-18-*-*-*-*-*-*-*
 
-urxvt*font:	-*-terminus-medium-*-*-*-18-*-*-*-*-*-*-*
+URxvt*background:     #0c0d0e
+URxvt*foreground:     #7f8f9f
+URxvt*scrollBar:      false
+URxvt*matcher.button: 1
+URxvt.transparent:    false
+URxvt*allow_bold:     true
 
-urxvt*background:     #0c0d0e
-urxvt*foreground:     #7f8f9f
-urxvt*scrollBar:      false
-urxvt*matcher.button: 1
-urxvt.transparent:    false
-urxvt*allow_bold:     true
-
-urxvt*geometry:       85x16
-urxvt*fading:         0
-urxvt*tintColor:      #ffffff
-urxvt*shading:        0
-urxvt*inheritPixmap:  False
+URxvt*geometry:       85x16
+URxvt*fading:         0
+URxvt*tintColor:      #ffffff
+URxvt*shading:        0
+URxvt*inheritPixmap:  False
 
 ! Colors for man pages
-urxvt.colorIT:     #87af5f
-urxvt.colorBD:     #d7d7d7
-urxvt.colorUL:     #87afd7
+URxvt.colorIT:     #87af5f
+URxvt.colorBD:     #d7d7d7
+URxvt.colorUL:     #87afd7
 
 ! black + red
-urxvt*color0:      #101010
-urxvt*color1:      #705050
+URxvt*color0:      #101010
+URxvt*color1:      #705050
 ! green + yellow
-urxvt*color2:      #60b48a
-urxvt*color3:      #f0dfaf
+URxvt*color2:      #60b48a
+URxvt*color3:      #f0dfaf
 ! blue + purple
-urxvt*color4:      #506070
-urxvt*color5:      #dc8cc3
+URxvt*color4:      #506070
+URxvt*color5:      #dc8cc3
 ! cyan + white
-urxvt*color6:      #8cd0d3
-urxvt*color7:      #dcdccc
+URxvt*color6:      #8cd0d3
+URxvt*color7:      #dcdccc
 ! bright-black + bright-red
-urxvt*color8:      #333333
-urxvt*color9:      #dca3a3
+URxvt*color8:      #333333
+URxvt*color9:      #dca3a3
 ! bright-green + bright-yellow
-urxvt*color10:     #c3bf9f
-urxvt*color11:     #f0dfaf
+URxvt*color10:     #c3bf9f
+URxvt*color11:     #f0dfaf
 ! bright-blue + bright-purple
-urxvt*color12:     #94bff3
-urxvt*color13:     #ec93d3
+URxvt*color12:     #94bff3
+URxvt*color13:     #ec93d3
 ! bright-cyan + bright-white
-urxvt*color14:     #93e0e3
-urxvt*color15:     #ffffff
+URxvt*color14:     #93e0e3
+URxvt*color15:     #ffffff
