@@ -7,7 +7,7 @@ sudo apt-get -y install \
     suckless-tools vim xfonts-terminus rxvt-unicode python2.7-dev htop tree \
     dzen2 ranger numlockx xxkb lftp colordiff ncdu feh pydf cloc zathura dtrx \
     fish exuberant-ctags silversearcher-ag chromium-browser ruby golang sshrc \
-    libxtst-dev
+    libxtst-dev wmctrl
 
 cd /tmp
 rm -rf xcape

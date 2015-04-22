@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
-mkdir -p ~/bin
-rm -f ~/bin/fasd
-wget https://raw.githubusercontent.com/clvv/fasd/master/fasd -O ~/bin/fasd
-chmod +x ~/bin/fasd
+mkdir -p ~/.bin
+rm -f ~/.bin/fasd
+wget https://raw.githubusercontent.com/clvv/fasd/master/fasd -O ~/.bin/fasd
+chmod +x ~/.bin/fasd
 
 rm -rf ~/.fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf

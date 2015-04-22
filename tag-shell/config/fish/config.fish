@@ -48,7 +48,7 @@ set --erase GREP_OPTIONS
 . $fish_path/oh-my-fish.fish
 
 # Add fzf to PATH
-set PATH ~/bin $PATH ~/.fzf
+set PATH ~/.bin $PATH ~/.fzf
 
 # Addd extra PATH components
-. $HOME/.config/fish/path.fish
+. ~/.config/fish/path.fish
