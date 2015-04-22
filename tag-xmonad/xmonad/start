@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+(sleep 5s && \
+    xset b off && \
+    xset r rate 250 45 && \
+    setxkbmap -layout "us,ru" -option "grp:toggle,ctrl:nocaps,terminate:ctrl_alt_bksp") &
+xrdb -merge ~/.Xresources
+numlockx
+xxkb &
+export PATH=~/bin:$PATH
+chromium || chromium-browser &
+exec xmonad
