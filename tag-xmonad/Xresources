@@ -1,54 +1,56 @@
+! Font settings
+xft.autohint:  0
+xft.lcdfilter: lcddefault
+xft.hintstyle: hintfull
+xft.hinting:   1
+xft.antialias: 1
+xft.dpi:       96
+xft.rgba:      rgb
+
+! Cursor style
+xcursor.theme: Vanilla-DMZ-AA
+xcursor.size:  22
+
+! Emacs colors
+emacs*Background:	#0c0d0e
+emacs*Foreground:	#7f8f9f
+
 ! Disable ctrl-shift keycap picture insert mode
-URxvt.iso14755: false
-URxvt.iso14755_52: false
+urxvt.iso14755: false
+urxvt.iso14755_52: false
 
 ! scrollback buffer lines - 65535 is max on most machines (64 is default)
-URxvt*saveLines: 65535
+urxvt*saveLines: 65535
 
-URxvt.perl-ext-common:  default,keyboard-select,url-select,clipboard
-URxvt.urlLauncher:      /usr/bin/chromium
-URxvt.underlineURLs:    true
+urxvt.perl-ext-common:  default,keyboard-select,url-select,clipboard
+urxvt.urlLauncher:      /usr/bin/chromium
+urxvt.underlineURLs:    true
 
-URxvt.keysym.M-Escape:  perl:keyboard-select:activate
-URxvt.keysym.M-u:       perl:url-select:select_next
-URxvt.keysym.M-c:       perl:clipboard:copy
-URxvt.keysym.M-v:       perl:clipboard:paste
-URxvt.keysym.M-C-v:     perl:clipboard:paste_escaped
-
-Xft.autohint:  0
-Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintfull
-Xft.hinting:   1
-Xft.antialias: 1
-Xft.dpi:       96
-Xft.rgba:      rgb
-
-Xcursor.theme: Vanilla-DMZ-AA
-Xcursor.size:  22
-
-
-Emacs*Background:	#0c0d0e
-Emacs*Foreground:	#7f8f9f
+urxvt.keysym.M-Escape:  perl:keyboard-select:activate
+urxvt.keysym.M-u:       perl:url-select:select_next
+urxvt.keysym.M-c:       perl:clipboard:copy
+urxvt.keysym.M-v:       perl:clipboard:paste
+urxvt.keysym.M-C-v:     perl:clipboard:paste_escaped
 
 urxvt*font:	-*-terminus-medium-*-*-*-18-*-*-*-*-*-*-*
 
-urxvt*background:	#0c0d0e
-urxvt*foreground:	#7f8f9f
-urxvt*scrollBar:	false
-urxvt*matcher.button:	1
-urxvt.transparent:	false
-urxvt*allow_bold:	true
+urxvt*background:     #0c0d0e
+urxvt*foreground:     #7f8f9f
+urxvt*scrollBar:      false
+urxvt*matcher.button: 1
+urxvt.transparent:    false
+urxvt*allow_bold:     true
 
-URxvt*geometry:		85x16
-URxvt*fading:		0
-URxvt*tintColor:	#ffffff
-URxvt*shading:		0
-URxvt*inheritPixmap:	False
+urxvt*geometry:       85x16
+urxvt*fading:         0
+urxvt*tintColor:      #ffffff
+urxvt*shading:        0
+urxvt*inheritPixmap:  False
 
 ! Colors for man pages
-URxvt.colorIT:      #87af5f
-URxvt.colorBD:      #d7d7d7
-URxvt.colorUL:      #87afd7
+urxvt.colorIT:     #87af5f
+urxvt.colorBD:     #d7d7d7
+urxvt.colorUL:     #87afd7
 
 ! black + red
 urxvt*color0:      #101010
