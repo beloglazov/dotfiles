@@ -15,5 +15,6 @@ xrdb -merge ~/.Xresources
 numlockx
 xxkb &
 export PATH=~/bin:$PATH
+urxvtd -q -f -o
 chromium || chromium-browser &
 exec xmonad

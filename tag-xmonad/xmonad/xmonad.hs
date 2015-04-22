@@ -28,7 +28,7 @@ myModMask = mod4Mask
 main = do
 	xmonad $ ewmh defaultConfig
 		{ layoutHook         = smartBorders $ myLayout
-		, terminal           = "urxvt"
+		, terminal           = "urxvtc"
 		, modMask            = myModMask
 		, borderWidth        = 2
 		, normalBorderColor  = "#0c0d0e"
