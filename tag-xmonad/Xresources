@@ -25,7 +25,6 @@ URxvt*saveLines: 65535
 ! URxvt extensions
 URxvt.perl-ext-common:  default,clipboard-osc,matcher
 URxvt.url-launcher:     chromium-browser
-URxvt.keysym.C-Delete:  perl:matcher:last
 URxvt.keysym.M-Delete:  perl:matcher:list
 URxvt.matcher.button:   2
 
