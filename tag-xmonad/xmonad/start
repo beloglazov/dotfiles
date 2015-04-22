@@ -3,9 +3,15 @@
 (sleep 5s && \
     xset b off && \
     xset r rate 250 45 && \
-    setxkbmap -layout "us,ru" -option "grp:toggle,ctrl:nocaps,terminate:ctrl_alt_bksp") &
+    setxkbmap -layout "us,ru" && \
+    setxkbmap -option "grp:toggle,ctrl:nocaps,terminate:ctrl_alt_bksp" && \
+    xcape -t 200 && \
+    xcape -t 200 -e 'Super_L=F1' && \
+    xcape -t 200 -e 'Alt_L=F2' && \
+    xcape -t 200 -e 'Control_R=F3' && \
+    ~/.config/mouse) &
+
 xrdb -merge ~/.Xresources
-~/.config/mouse
 numlockx
 xxkb &
 export PATH=~/bin:$PATH
