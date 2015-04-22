@@ -5,6 +5,7 @@
     xset r rate 250 45 && \
     setxkbmap -layout "us,ru" -option "grp:toggle,ctrl:nocaps,terminate:ctrl_alt_bksp") &
 xrdb -merge ~/.Xresources
+~/.config/mouse
 numlockx
 xxkb &
 export PATH=~/bin:$PATH
