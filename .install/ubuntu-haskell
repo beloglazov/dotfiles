@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+sudo apt-add-repository -y ppa:hvr/ghc
+sudo apt-get update
+sudo apt-get install cabal-install-1.20 ghc-7.8.4 happy-1.19.4 alex-3.1.3
