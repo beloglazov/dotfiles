@@ -16,5 +16,5 @@ numlockx
 xxkb &
 export PATH=$HOME/.bin:$PATH
 urxvtd -q -f -o
-chromium || chromium-browser &
+#chromium || chromium-browser &
 exec xmonad
