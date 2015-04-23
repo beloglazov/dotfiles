@@ -10,6 +10,10 @@ sudo apt-get -y install \
     fish exuberant-ctags silversearcher-ag chromium-browser ruby golang sshrc \
     libxtst-dev wmctrl autoconf libncurses5-dev htop tree
 
+wget https://thoughtbot.github.io/rcm/debs/rcm_1.2.3-1_all.deb
+sudo dpkg -i rcm_1.2.3-1_all.deb
+rm -f rcm_1.2.3-1_all.deb
+
 cd /tmp
 rm -rf xcape
 git clone https://github.com/alols/xcape.git
