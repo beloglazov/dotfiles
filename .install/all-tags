@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-for i in `ls -1 ~/.dotfiles/tag-*`; do
+for i in `ls -d1 ~/.dotfiles/tag-*`; do
     tag=`echo $i | cut -d- -f2`
     echo "> rcup -t $tag"
     rcup -t $tag
