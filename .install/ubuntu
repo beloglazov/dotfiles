@@ -20,3 +20,11 @@ git clone https://github.com/alols/xcape.git
 cd xcape
 make
 sudo make install
+
+mkdir -p ~/.fonts
+cd ~/.fonts
+wget http://files.ax86.net/terminus-ttf/files/latest.zip
+unzip latest.zip
+mv terminus-*/*.ttf ./
+rm -rf terminus-* latest.zip
+sudo fc-cache -fv
