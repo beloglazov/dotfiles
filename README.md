@@ -27,3 +27,5 @@ To uninstall the configs, run:
 ```Bash
 rcdn -t xmonad -t shell -t vim
 ```
+
+You can also just run `./.install/all-tags` to setup all configs.
