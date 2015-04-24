@@ -6,9 +6,11 @@
     setxkbmap -layout "us,ru" && \
     setxkbmap -option "grp:toggle,ctrl:nocaps,terminate:ctrl_alt_bksp" && \
     xcape -t 200 && \
-    xcape -t 200 -e 'Super_L=F1' && \
-    xcape -t 200 -e 'Alt_L=F2' && \
-    xcape -t 200 -e 'Control_R=F3' && \
+    xcape -t 200 -e 'Shift_L=F1' && \
+    xcape -t 200 -e 'Super_L=F2' && \
+    xcape -t 200 -e 'Alt_L=F3' && \
+    xcape -t 200 -e 'Control_R=F4' && \
+    xcape -t 200 -e 'Shift_R=F5' && \
     ~/.config/mouse) &
 
 xrdb -merge ~/.Xresources
