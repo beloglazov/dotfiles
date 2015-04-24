@@ -103,9 +103,33 @@ Plug 'tpope/vim-repeat'
 
 Plug 'tpope/vim-surround'
 
-Plug 'tpope/vim-unimpaired'
-" nunmap =p
-" nunmap =P
+" Plug 'tpope/vim-unimpaired'
+" Extract from vim-unimpaired:
+function! s:MapNextFamily(map,cmd)
+  let map = '<Plug>unimpaired'.toupper(a:map)
+  let cmd = '".(v:count ? v:count : "")."'.a:cmd
+  let end = '"<CR>'.(a:cmd == 'l' || a:cmd == 'c' ? 'zv' : '')
+  execute 'nnoremap <silent> '.map.'Previous :<C-U>exe "'.cmd.'previous'.end
+  execute 'nnoremap <silent> '.map.'Next     :<C-U>exe "'.cmd.'next'.end
+  execute 'nnoremap <silent> '.map.'First    :<C-U>exe "'.cmd.'first'.end
+  execute 'nnoremap <silent> '.map.'Last     :<C-U>exe "'.cmd.'last'.end
+  execute 'nmap <silent> ['.        a:map .' '.map.'Previous'
+  execute 'nmap <silent> ]'.        a:map .' '.map.'Next'
+  execute 'nmap <silent> ['.toupper(a:map).' '.map.'First'
+  execute 'nmap <silent> ]'.toupper(a:map).' '.map.'Last'
+  if exists(':'.a:cmd.'nfile')
+    execute 'nnoremap <silent> '.map.'PFile :<C-U>exe "'.cmd.'pfile'.end
+    execute 'nnoremap <silent> '.map.'NFile :<C-U>exe "'.cmd.'nfile'.end
+    execute 'nmap <silent> [<C-'.a:map.'> '.map.'PFile'
+    execute 'nmap <silent> ]<C-'.a:map.'> '.map.'NFile'
+  endif
+endfunction
+
+call s:MapNextFamily('a','')
+call s:MapNextFamily('b','b')
+call s:MapNextFamily('l','l')
+call s:MapNextFamily('q','c')
+call s:MapNextFamily('t','t')
 
 Plug 'zirrostig/vim-schlepp'
 let g:Schlepp#reindent = 1
@@ -294,26 +318,27 @@ autocmd FileType fish compiler fish
 " Haskell
 " ----------------------------------------------------------------------------
 
-Plug 'dag/vim2hs'
-let g:haskell_conceal = 0
-let g:haskell_autotags = 1
-let g:haskell_tags_generator = 'fast-tags'
-autocmd FileType haskell nnoremap <localleader>t= :Tabularize haskell_bindings<CR>
+Plug 'raichoo/haskell-vim'
 
 Plug 'Shougo/vimproc.vim'
 
 Plug 'eagletmt/ghcmod-vim'
+autocmd FileType haskell map <silent> = :GhcModType<CR>
+autocmd FileType haskell map <silent> - :GhcModTypeClear<CR>
 autocmd BufWritePost *.hs GhcModCheckAndLintAsync
 hi ghcmodType ctermbg=yellow
 let g:ghcmod_type_highlight = 'ghcmodType'
-map <silent> + :GhcModType<CR>
-map <silent> _ :GhcModTypeClear<CR>
 
 Plug 'eagletmt/neco-ghc'
 let g:necoghc_enable_detailed_browse = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 Plug 'nbouscal/vim-stylish-haskell'
+
+Plug 'Twinside/vim-hoogle'
+
+" Run pointfree when formatting a selected expression
+autocmd FileType haskell set formatprg=xargs\ pointfree
 
 
 " ----------------------------------------------------------------------------
