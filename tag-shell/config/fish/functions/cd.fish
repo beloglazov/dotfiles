@@ -31,5 +31,7 @@ function cd
         set -g __fish_cd_direction prev
     end
 
+    l
+
     return $cd_status
 end
