@@ -7,8 +7,8 @@ sudo apt-get -y install \
     build-essential cmake xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev \
     suckless-tools vim-gtk xfonts-terminus rxvt-unicode-256color python2.7-dev \
     dzen2 ranger numlockx xxkb lftp colordiff ncdu feh pydf cloc zathura dtrx \
-    fish exuberant-ctags silversearcher-ag chromium-browser ruby golang sshrc \
-    libxtst-dev wmctrl autoconf libncurses5-dev htop tree
+    fish exuberant-ctags silversearcher-ag chromium-browser ruby ruby-redcarpet \
+    golang sshrc libxtst-dev wmctrl autoconf libncurses5-dev htop tree
 
 wget https://thoughtbot.github.io/rcm/debs/rcm_1.2.3-1_all.deb
 sudo dpkg -i rcm_1.2.3-1_all.deb
