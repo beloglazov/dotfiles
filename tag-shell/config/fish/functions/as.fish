@@ -1,3 +1,3 @@
 function as
-    apt-cache search $argv
+    apt search $argv
 end
