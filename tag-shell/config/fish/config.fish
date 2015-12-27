@@ -1,12 +1,6 @@
 # Path to oh-my-fish
 set fish_path $HOME/.oh-my-fish
 
-# Theme
-set fish_theme beloglazov
-
-# Plugins
-set fish_plugins vi-mode pbcopy
-
 # Correct default editor
 set --export EDITOR vim
 
@@ -49,6 +43,13 @@ set --erase GREP_OPTIONS
 
 # Load oh-my-fish configuration
 . $fish_path/oh-my-fish.fish
+
+# Theme
+Theme "beloglazov"
+
+# Plugins
+Plugin "vi-mode"
+Plugin "pbcopy"
 
 # Add fzf to PATH
 set PATH ~/.bin $PATH ~/.fzf
